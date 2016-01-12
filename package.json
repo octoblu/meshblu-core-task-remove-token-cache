@@ -1,0 +1,36 @@
+{
+  "name": "meshblu-core-task-check-token-cache",
+  "version": "1.0.0",
+  "description": "Meshblu Core Check Token Cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octoblu/meshblu-core-task-check-token-cache.git"
+  },
+  "author": "Octoblu, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/meshblu-core-task-check-token-cache/issues"
+  },
+  "homepage": "https://github.com/octoblu/meshblu-core-task-check-token-cache#readme",
+  "keywords": [
+    "meshblu"
+  ],
+  "dependencies": {
+    "meshblu-core-manager-token": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "coffee-coverage": "^0.6.3",
+    "fakeredis": "^0.3.4",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "mocha-istanbul": "^0.2.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "uuid": "^2.0.1"
+  }
+}
