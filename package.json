@@ -1,21 +1,21 @@
 {
-  "name": "meshblu-core-task-check-token-cache",
+  "name": "meshblu-core-task-remove-token-cache",
   "version": "1.0.0",
-  "description": "Meshblu Core Check Token Cache",
+  "description": "Meshblu Core Remove Token Cache",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/octoblu/meshblu-core-task-check-token-cache.git"
+    "url": "git+https://github.com/octoblu/meshblu-core-task-remove-token-cache.git"
   },
   "author": "Octoblu, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/octoblu/meshblu-core-task-check-token-cache/issues"
+    "url": "https://github.com/octoblu/meshblu-core-task-remove-token-cache/issues"
   },
-  "homepage": "https://github.com/octoblu/meshblu-core-task-check-token-cache#readme",
+  "homepage": "https://github.com/octoblu/meshblu-core-task-remove-token-cache#readme",
   "keywords": [
     "meshblu"
   ],

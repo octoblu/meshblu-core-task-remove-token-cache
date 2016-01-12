@@ -1,4 +1,3 @@
-crypto = require 'crypto'
 http   = require 'http'
 TokenManager = require 'meshblu-core-manager-token'
 
