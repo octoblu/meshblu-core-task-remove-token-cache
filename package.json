@@ -1,6 +1,6 @@
 {
   "name": "meshblu-core-task-remove-token-cache",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Meshblu Core Remove Token Cache",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "meshblu"
   ],
   "dependencies": {
-    "meshblu-core-manager-token": "^3.0.0"
+    "meshblu-core-manager-token": "^4.3.0"
   },
   "devDependencies": {
     "chai": "^3.4.0",
