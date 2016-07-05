@@ -3,6 +3,9 @@ node_js:
 - '5'
 env:
 - CXX=g++-4.8
+branches:
+  only:
+  - "/^v[0-9]/"
 addons:
   apt:
     sources:
