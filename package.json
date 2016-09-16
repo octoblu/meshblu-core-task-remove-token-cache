@@ -4,7 +4,7 @@
   "description": "Meshblu Core Remove Token Cache",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec"
+    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul && mocha --reporter json > coverage/mocha.json"
   },
   "repository": {
     "type": "git",
