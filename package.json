@@ -4,7 +4,10 @@
   "description": "Meshblu Core Remove Token Cache",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul && mocha --reporter json > coverage/mocha.json"
+    "test": "mocha",
+    "coverage": "nyc npm test",
+    "mocha:json": "env NPM_ENV=test mocha --reporter json > coverage/mocha.json",
+    "test:watch": "mocha -w -R mocha-multi --reporter-options spec=-,mocha-osx-reporter=-"
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,24 @@
   },
   "devDependencies": {
     "chai": "^3.4.0",
-    "coffee-coverage": "^1.0.1",
     "fakeredis": "^1.0.3",
-    "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
-    "mocha-istanbul": "^0.2.0",
+    "mocha-multi": "^0.9.1",
+    "mocha-osx-reporter": "^0.1.2",
+    "nyc": "^8.3.0",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "uuid": "^2.0.1"
+  },
+  "nyc": {
+    "cache": true,
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "json"
+    ],
+    "extension": [
+      ".coffee"
+    ]
   }
 }
