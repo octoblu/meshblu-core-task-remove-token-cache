@@ -1,17 +1,18 @@
+{describe,beforeEach,expect,it} = global
 RemoveTokenCache = require '..'
-crypto = require 'crypto'
-redis  = require 'fakeredis'
-uuid   = require 'uuid'
+redis            = require 'fakeredis'
+RedisNS          = require '@octoblu/redis-ns'
+uuid             = require 'uuid'
 
 describe 'RemoveTokenCache', ->
   beforeEach ->
     @redisKey = uuid.v1()
     @uuidAliasResolver = resolve: (uuid, callback) => callback null, uuid
     @sut = new RemoveTokenCache
-      cache: redis.createClient(@redisKey)
+      cache: new RedisNS 'ns', redis.createClient(@redisKey)
       pepper: 'totally-a-secret'
       uuidAliasResolver: @uuidAliasResolver
-    @cache = redis.createClient @redisKey
+    @cache = new RedisNS 'ns', redis.createClient @redisKey
 
   describe '->do', ->
     describe 'when the cache exists', ->
